@@ -11,7 +11,7 @@ const graveyardBuilder = () => {
     domString += '  <div class="card">';
     domString += '    <div class="card-body">';
     domString += `    <h5 class="card-title">${person.name}</h5>`;
-    domString += '    <button type="button" class="btn btn-primary">Resurrect</button>',
+    domString += '    <button type="button" class="btn btn-primary revive-btn">Revive</button>',
     domString += '    </div>';
     domString += '  </div>';
     domString += '</div>';
@@ -19,5 +19,7 @@ const graveyardBuilder = () => {
   domString += '</div>';
   utils.printToDom('graveyard', domString);
 };
+
+
 
 export default { graveyardBuilder };

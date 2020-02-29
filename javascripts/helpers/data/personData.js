@@ -142,4 +142,9 @@ const randomMurder = () => {
   persons[deadMan].isDead = true;
 };
 
-export default { getAlivePersons, getDeadPersons, randomMurder };
+const bringToLife = () => {
+  //const deadPeople = getDeadPersons();
+  console.log('it worked');
+};
+
+export default { getAlivePersons, getDeadPersons, randomMurder, bringToLife };

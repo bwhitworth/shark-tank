@@ -12,6 +12,7 @@ const init = () => {
   tank.tankBuilder();
   graveyard.graveyardBuilder();
   $( "#bite-me" ).click(sharkAttackEvent);
+  $( "body" ).on( 'click', '.revive-btn', personData.bringToLife);
 };
 
 init();
