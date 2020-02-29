@@ -3,15 +3,20 @@ import personData from "../helpers/data/personData.js";
 
 const graveyardBuilder = () => {
   const persons = personData.getDeadPersons();
-  let domString = '';
-  domString += '  <div class="card">',
-  domString += '    <div class="card-header">GRAVEYARD</div>',
-  domString += '    <ul class="list-group list-group-flush">',
-  persons.forEach((p) => {
-    domString += `  <li class="list-group-item">${p.name}</li>`
+  let domString = '<h2 class="col-12 text-center">Graveyard</h2>';
+  domString += '<div class="d-flex flex-wrap">';
+
+  persons.forEach((person) => {
+    domString += '<div class="col-4 person-card">';
+    domString += '  <div class="card">';
+    domString += '    <div class="card-body">';
+    domString += `    <h5 class="card-title">${person.name}</h5>`;
+    domString += '    <button type="button" class="btn btn-primary">Resurrect</button>',
+    domString += '    </div>';
+    domString += '  </div>';
+    domString += '</div>';
   });
-  domString += '    </ul>',
-  domString += '  </div>',
+  domString += '</div>';
   utils.printToDom('graveyard', domString);
 };
 
