@@ -1,3 +1,11 @@
 body {
   background-color: lightskyblue;
 }
+
+.person-card{
+  margin-bottom: 15px;
+} 
+
+.main-body {
+  margin-left: 10px;
+}
